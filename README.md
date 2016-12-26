@@ -1,2 +1,2 @@
-# example__zipcode-mircoservice
-Carbon.io Example: Zipcode microservice
+# example__zipcode-service
+Carbon.io Example: Zipcode service
