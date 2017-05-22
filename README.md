@@ -42,3 +42,11 @@ or
 % npm test
 ```
 
+## Generating API documentation (aglio flavor)
+
+```sh
+% node lib/ZipcodeService gen-static-docs --flavor aglio --out docs/index.html
+```
+
+* [View current documentation](
+http://htmlpreview.github.io/?https://raw.githubusercontent.com/carbon-io/example__zipcode-service/master/docs/index.html)
