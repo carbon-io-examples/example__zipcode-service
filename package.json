@@ -8,7 +8,7 @@
     "url" : "https://github.com/carbon-io/example__zipcode-service"
   },
   "dependencies": {
-    "carbon-io" : "> 0.1.0"
+    "carbon-io" : "0.6.*"
   },
   "scripts": {
     "test": "node test/ZipcodeServiceTest"
