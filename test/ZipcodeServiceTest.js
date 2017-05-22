@@ -60,7 +60,6 @@ __(function() {
         },
         resSpec: {
           statusCode: 201,
-          body: { _id: "94114", state: "CA" }
         }
       },
       {
@@ -119,7 +118,6 @@ __(function() {
           statusCode: 200,
           body: function(body) {
             assert(body.length === 2)
-            return true
           }
         }
       },
@@ -170,7 +168,7 @@ __(function() {
           method: "DELETE"
         },
         resSpec: {
-          statusCode: 200
+          statusCode: 204
         }
       },
       {
@@ -191,7 +189,6 @@ __(function() {
           statusCode: 200,
           body: function(body) {
             assert(body.length === 2) // Should only have two now
-            return true
           }
         }
       },
