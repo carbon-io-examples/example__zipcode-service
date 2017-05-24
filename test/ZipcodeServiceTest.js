@@ -1,9 +1,8 @@
-var assert = require('assert')
-
 var carbon = require('carbon-io')
-var o      = carbon.atom.o(module).main
+var __     = carbon.fibers.__(module)
 var _o     = carbon.bond._o(module)
-var __     = carbon.fibers.__(module).main
+var o      = carbon.atom.o(module).main
+var assert = require('assert')
 
 /***************************************************************************************************
  * ZipcodeServiceTest
