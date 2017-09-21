@@ -18,7 +18,7 @@ __(function() {
     /***************************************************************************
      * name
      */
-    name: "ZipcodeServiceTest",
+    name: 'ZipcodeServiceTest',
 
     /***************************************************************************
      * service
@@ -54,8 +54,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "POST",
-          body: { _id: "94114", state: "CA" }
+          method: 'POST',
+          body: { zip: '94114', state: 'CA' }
         },
         resSpec: {
           statusCode: 201,
@@ -64,8 +64,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "POST",
-          body: { _id: "94110", state: "CA" }
+          method: 'POST',
+          body: { zip: '94110', state: 'CA' }
         },
         resSpec: {
           statusCode: 201
@@ -74,8 +74,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "POST",
-          body: { _id: "10011", state: "NY" }
+          method: 'POST',
+          body: { zip: '10011', state: 'NY' }
         },
         resSpec: {
           statusCode: 201
@@ -86,8 +86,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "POST",
-          body: { _id: "1", state: "NY" } // Malformed zipcode
+          method: 'POST',
+          body: { zip: '1', state: 'NY' } // Malformed zipcode
         },
         resSpec: {
           statusCode: 400
@@ -96,8 +96,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "POST",
-          body: { _id: "10012", state: "NYC" } // Malformed state identifier
+          method: 'POST',
+          body: { zip: '10012', state: 'NYC' } // Malformed state identifier
         },
         resSpec: {
           statusCode: 400
@@ -108,9 +108,9 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
+          method: 'GET',
           parameters: { 
-            query: { state: "CA" }
+            query: { state: 'CA' }
           }
         },
         resSpec: {
@@ -123,14 +123,14 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
+          method: 'GET',
           parameters: { 
-            query: { state: "NY" }
+            query: { state: 'NY' }
           }
         },
         resSpec: {
           statusCode: 200,
-          body: [ { _id: "10011", state: "NY" } ]
+          body: [ { _id: '10011', state: 'NY' } ]
         }
       },
 
@@ -138,7 +138,7 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
+          method: 'GET',
           parameters: { 
             query: { foo: 2 } // We should not be allowed to seach by any field except 'state'
           }
@@ -152,11 +152,11 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 200,
-          body: { _id: "94114", state: "CA" }
+          body: { _id: '94114', state: 'CA' }
         }
       },
 
@@ -164,16 +164,16 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "DELETE"
+          method: 'DELETE'
         },
         resSpec: {
-          statusCode: 204
+          statusCode: 200
         }
       },
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 404 // Should no longer exist
@@ -182,7 +182,7 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 200,
@@ -192,6 +192,5 @@ __(function() {
         }
       },
     ]
-
   })
 })
