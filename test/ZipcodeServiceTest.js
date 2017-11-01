@@ -18,7 +18,7 @@ __(function() {
     /***************************************************************************
      * name
      */
-    name: "ZipcodeServiceTest",
+    name: 'ZipcodeServiceTest',
 
     /***************************************************************************
      * service
@@ -50,12 +50,12 @@ __(function() {
      * tests
      */
     tests: [
-      // Test POST by inserting some zipcodes
+      // Test PUT by inserting some zipcodes
       {
         reqSpec: {
-          url: '/zipcodes',
-          method: "POST",
-          body: { _id: "94114", state: "CA" }
+          url: '/zipcodes/94114',
+          method: 'PUT',
+          body: { _id: '94114', state: 'CA' }
         },
         resSpec: {
           statusCode: 201,
@@ -63,9 +63,9 @@ __(function() {
       },
       {
         reqSpec: {
-          url: '/zipcodes',
-          method: "POST",
-          body: { _id: "94110", state: "CA" }
+          url: '/zipcodes/94110',
+          method: 'PUT',
+          body: { _id: '94110', state: 'CA' }
         },
         resSpec: {
           statusCode: 201
@@ -73,21 +73,21 @@ __(function() {
       },
       {
         reqSpec: {
-          url: '/zipcodes',
-          method: "POST",
-          body: { _id: "10011", state: "NY" }
+          url: '/zipcodes/10011',
+          method: 'PUT',
+          body: { _id: '10011', state: 'NY' }
         },
         resSpec: {
           statusCode: 201
         }
       },
 
-      // Test invalid POSTS. These should get a 400 status code (Bad Request)
+      // Test invalid PUTS. These should get a 400 status code (Bad Request)
       {
         reqSpec: {
-          url: '/zipcodes',
-          method: "POST",
-          body: { _id: "1", state: "NY" } // Malformed zipcode
+          url: '/zipcodes/1',
+          method: 'PUT',
+          body: { _id: '1', state: 'NY' } // Malformed zipcode
         },
         resSpec: {
           statusCode: 400
@@ -95,9 +95,9 @@ __(function() {
       },
       {
         reqSpec: {
-          url: '/zipcodes',
-          method: "POST",
-          body: { _id: "10012", state: "NYC" } // Malformed state identifier
+          url: '/zipcodes/10012',
+          method: 'PUT',
+          body: { _id: '10012', state: 'NYC' } // Malformed state identifier
         },
         resSpec: {
           statusCode: 400
@@ -108,9 +108,9 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
-          parameters: { 
-            query: { state: "CA" }
+          method: 'GET',
+          parameters: {
+            query: { state: 'CA' }
           }
         },
         resSpec: {
@@ -123,14 +123,14 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
-          parameters: { 
-            query: { state: "NY" }
+          method: 'GET',
+          parameters: {
+            query: { state: 'NY' }
           }
         },
         resSpec: {
           statusCode: 200,
-          body: [ { _id: "10011", state: "NY" } ]
+          body: [ { _id: '10011', state: 'NY' } ]
         }
       },
 
@@ -138,8 +138,8 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET",
-          parameters: { 
+          method: 'GET',
+          parameters: {
             query: { foo: 2 } // We should not be allowed to seach by any field except 'state'
           }
         },
@@ -152,11 +152,11 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 200,
-          body: { _id: "94114", state: "CA" }
+          body: { _id: '94114', state: 'CA' }
         }
       },
 
@@ -164,16 +164,16 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "DELETE"
+          method: 'DELETE'
         },
         resSpec: {
-          statusCode: 204
+          statusCode: 200
         }
       },
       {
         reqSpec: {
           url: '/zipcodes/94114',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 404 // Should no longer exist
@@ -182,7 +182,7 @@ __(function() {
       {
         reqSpec: {
           url: '/zipcodes',
-          method: "GET"
+          method: 'GET'
         },
         resSpec: {
           statusCode: 200,
@@ -192,6 +192,5 @@ __(function() {
         }
       },
     ]
-
   })
 })
