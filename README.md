@@ -44,6 +44,14 @@ $ npm test
 
 ## Generating API documentation (aglio flavor)
 
+To generate documentation using aglio, install it as a devDependency:
+
+```
+$ npm install -D --no-optional aglio
+```
+
+Using `--no-optional` speeds up aglio's install time significantly. Then generate the docs using this command:
+
 ```sh
 $ node lib/ZipcodeService gen-static-docs --flavor aglio --out docs/index.html
 ```
