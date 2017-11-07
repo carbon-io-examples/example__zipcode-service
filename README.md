@@ -9,9 +9,9 @@ We encourage you to clone the git repository so you can play around
 with the code. 
 
 ```
-% git clone git@github.com:carbon-io/example__zipcode-service.git
-% cd example__zipcode-service
-% npm install
+$ git clone -b carbon-0.7 -b carbon-0.7 -b carbon-0.7 git@github.com:carbon-io-examples/example__zipcode-service.git
+$ cd example__zipcode-service
+$ npm install
 ```
 
 ## Running the service
@@ -19,13 +19,13 @@ with the code.
 To run the service:
 
 ```sh
-% node lib/ZipcodeService
+$ node lib/ZipcodeService
 ```
 
 For cmdline help:
 
 ```sh
-% node lib/ZipcodeService -h
+$ node lib/ZipcodeService -h
 ```
 
 ## Running the unit tests
@@ -33,19 +33,19 @@ For cmdline help:
 This example comes with a simple unit test written in Carbon.io's test framework called TestTube. It is located in the `test` directory. 
 
 ```
-% node test/ZipcodeServiceTest
+$ node test/ZipcodeServiceTest
 ```
 
 or 
 
 ```
-% npm test
+$ npm test
 ```
 
 ## Generating API documentation (aglio flavor)
 
 ```sh
-% node lib/ZipcodeService gen-static-docs --flavor aglio --out docs/index.html
+$ node lib/ZipcodeService gen-static-docs --flavor aglio --out docs/index.html
 ```
 
 * [View current documentation](
