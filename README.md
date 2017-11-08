@@ -1,5 +1,7 @@
 # Zipcode Service
 
+[![Build Status](https://img.shields.io/travis/carbon-io-examples/example__zipcode-service/carbon-0.7.svg?style=flat-square)](https://travis-ci.org/carbon-io-examples/example__zipcode-service)
+
 This example illustrates the use of Carbon.io to implement a simple
 microservice for managing zipcodes.
 
