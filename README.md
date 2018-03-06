@@ -10,7 +10,7 @@ microservice for managing zipcodes.
 ## Installing the service
 
 We encourage you to clone the git repository so you can play around
-with the code. 
+with the code.
 
 ```
 $ git clone -b carbon-0.7 git@github.com:carbon-io-examples/example__zipcode-service.git
@@ -34,13 +34,13 @@ $ node lib/ZipcodeService -h
 
 ## Running the unit tests
 
-This example comes with a simple unit test written in Carbon.io's test framework called TestTube. It is located in the `test` directory. 
+This example comes with a simple unit test written in Carbon.io's test framework called TestTube. It is located in the `test` directory.
 
 ```
 $ node test/ZipcodeServiceTest
 ```
 
-or 
+or
 
 ```
 $ npm test
